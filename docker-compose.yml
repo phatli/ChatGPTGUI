@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  phatgpt:
+    container_name: phatgpt
+    image: phatli/phatgpt:dev
+    stdin_open: true
+    tty: true
+    expose:
+      - "7860"
+    ports:
+      - "7861:7860"
+    volumes:
+      - type: bind
+        source: ./
+        target: /app

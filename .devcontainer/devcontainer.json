@@ -1,0 +1,35 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/ubuntu
+{
+  "name": "phatgpt_dev_container",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "phatgpt",
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.linting.pylintEnabled": true,
+        "python.linting.enabled": false,
+        "python.linting.flake8Enabled": false,
+        "python.formatting.provider": "autopep8"
+      },
+
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "eamodio.gitlens",
+        "christian-kohler.path-intellisense",
+        "sleistner.vscode-fileutils",
+        "exodiusstudios.comment-anchors",
+        "shd101wyy.markdown-preview-enhanced",
+        "donjayamanne.githistory",
+        "tht13.html-preview-vscode",
+        "esbenp.prettier-vscode",
+        "tabten.tabten-vscode"
+      ]
+    }
+  }
+//   "remoteUser": "user"
+}
